@@ -1,0 +1,89 @@
+{
+  "creationTimestamp": "2025-03-02T09:34:01.781-08:00",
+  "description": "",
+  "id": "8338228878542186598",
+  "kind": "compute#instanceTemplate",
+  "name": "instance-template-m22aie241",
+  "properties": {
+    "confidentialInstanceConfig": {
+      "enableConfidentialCompute": false
+    },
+    "description": "",
+    "scheduling": {
+      "onHostMaintenance": "MIGRATE",
+      "provisioningModel": "STANDARD",
+      "automaticRestart": false,
+      "preemptible": false
+    },
+    "tags": {
+      "items": [
+        "http-server",
+        "https-server",
+        "lb-health-check"
+      ]
+    },
+    "disks": [
+      {
+        "type": "PERSISTENT",
+        "deviceName": "instance-template-m22aie241",
+        "autoDelete": true,
+        "index": 0,
+        "boot": true,
+        "kind": "compute#attachedDisk",
+        "mode": "READ_WRITE",
+        "initializeParams": {
+          "sourceImage": "projects/debian-cloud/global/images/debian-12-bookworm-v20250212",
+          "diskType": "pd-balanced",
+          "diskSizeGb": "10"
+        }
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "stackType": "IPV4_ONLY",
+        "name": "nic0",
+        "network": "https://www.googleapis.com/compute/beta/projects/cloud-computing-452515/global/networks/default",
+        "accessConfigs": [
+          {
+            "name": "External NAT",
+            "type": "ONE_TO_ONE_NAT",
+            "kind": "compute#accessConfig",
+            "networkTier": "PREMIUM"
+          }
+        ],
+        "kind": "compute#networkInterface"
+      }
+    ],
+    "reservationAffinity": {
+      "consumeReservationType": "ANY_RESERVATION"
+    },
+    "canIpForward": false,
+    "keyRevocationActionType": "NONE",
+    "machineType": "e2-micro",
+    "metadata": {
+      "fingerprint": "kRMDIz19uvU=",
+      "kind": "compute#metadata",
+      "items": [
+        {
+          "value": "#!/bin/bash\n\n# Update package lists\napt-get update -y \n\n# Install Apache web server\napt-get install apache2 -y\n\n# Install PHP 7.0\napt-get install php7.0 -y\n\n# Rename default Apache web page if it exists\nif [ -f /var/www/html/index.html ]; then\n    mv /var/www/html/index.html /var/www/html/index.php\nfi\n\n# Create a new index.php file with the given content\ncat <<EOF > /var/www/html/index.php\n<html>\n    <body>\n        <h2>Assignment 2 load balancing check</h2>\n    </body>\n</html>\nEOF\n",
+          "key": "startup-script"
+        }
+      ]
+    },
+    "shieldedVmConfig": {
+      "enableSecureBoot": false,
+      "enableVtpm": true,
+      "enableIntegrityMonitoring": true
+    },
+    "shieldedInstanceConfig": {
+      "enableSecureBoot": false,
+      "enableVtpm": true,
+      "enableIntegrityMonitoring": true
+    },
+    "displayDevice": {
+      "enableDisplay": false
+    }
+  },
+  "region": "https://www.googleapis.com/compute/beta/projects/cloud-computing-452515/regions/us-central1",
+  "selfLink": "projects/cloud-computing-452515/regions/us-central1/instanceTemplates/instance-template-m22aie241"
+}

@@ -1,0 +1,149 @@
+{
+    "canIpForward": false,
+    "confidentialInstanceConfig": {
+      "enableConfidentialCompute": false
+    },
+    "cpuPlatform": "Intel Broadwell",
+    "creationTimestamp": "2025-03-02T07:57:53.502-08:00",
+    "deletionProtection": false,
+    "description": "",
+    "disks": [
+      {
+        "architecture": "X86_64",
+        "guestOsFeatures": [
+          {
+            "type": "UEFI_COMPATIBLE"
+          },
+          {
+            "type": "VIRTIO_SCSI_MULTIQUEUE"
+          },
+          {
+            "type": "GVNIC"
+          },
+          {
+            "type": "SEV_CAPABLE"
+          },
+          {
+            "type": "SEV_LIVE_MIGRATABLE_V2"
+          }
+        ],
+        "type": "PERSISTENT",
+        "licenses": [
+          "projects/debian-cloud/global/licenses/debian-12-bookworm"
+        ],
+        "deviceName": "instance1-m22aie241",
+        "autoDelete": true,
+        "source": "projects/cloud-computing-452515/zones/us-central1-c/disks/instance1-m22aie241",
+        "index": 0,
+        "boot": true,
+        "kind": "compute#attachedDisk",
+        "mode": "READ_WRITE",
+        "interface": "SCSI",
+        "diskSizeGb": "10"
+      }
+    ],
+    "displayDevice": {
+      "enableDisplay": false
+    },
+    "fingerprint": "yzm0gAY8ldE=",
+    "id": "77040545191018768",
+    "keyRevocationActionType": "NONE",
+    "kind": "compute#instance",
+    "labelFingerprint": "pzBpbdzjubE=",
+    "labels": {
+      "goog-ops-agent-policy": "v2-x86-template-1-4-0"
+    },
+    "lastStartTimestamp": "2025-03-02T10:44:15.008-08:00",
+    "lastStopTimestamp": "2025-03-02T10:38:15.997-08:00",
+    "machineType": "projects/cloud-computing-452515/zones/us-central1-c/machineTypes/e2-micro",
+    "metadata": {
+      "fingerprint": "M0ZGH6xZsEc=",
+      "kind": "compute#metadata",
+      "items": [
+        {
+          "value": "TRUE",
+          "key": "enable-osconfig"
+        },
+        {
+          "value": "m22aie241:ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOvgq64QliLr3LpsDWqiD+rSqX2AgCkKjhdFbpu8yaDEHXs2vGd4XZHAn8NPr6GPlHxGGwYlDF5cLV0wrylTnXc= google-ssh {\"userName\":\"m22aie241@iitj.ac.in\",\"expireOn\":\"2025-03-02T18:51:00+0000\"}\nm22aie241:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC1+0m/p9m7aZXaTWaOLWlnlM9+BPkPeE0byotE2AJ2XnREoQENETRmB0ldeC+6LxmKqF71DkCsP0kVIDs8Nkdv6uCLdO++4FUonOUgSKncP4aHJHTTulYqiRckEMEeOe8CDLsoUPQl94HhyU2qqwlbOk4G8dzrUTKIuIk6w4YQ15r1deaNuTZHYACX96OFU8Wsw5C4Bh1gWVXECq3GtnHFmB2OYkk8al66Ygzg2BqxPTSDaUYKXNbIJHp7XjcY/ucpBtSAArt3aYweyjb/Kx8ncnpHg6M+bncilI/FjVE7DlhBE1vnTCXwG9XhbKu85aljgGFoVkSSk/Epu7gFHRmX google-ssh {\"userName\":\"m22aie241@iitj.ac.in\",\"expireOn\":\"2025-03-02T18:51:08+0000\"}\nm22aie241:ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOSFdbYgQqOH988KEm5K7GMuPu0aYhqxTzjosxIYXinUokNaWKRU4M/DF7EmCjVqVafT3IFrhoXILXFamJk/xwQ= google-ssh {\"userName\":\"m22aie241@iitj.ac.in\",\"expireOn\":\"2025-03-02T18:53:32+0000\"}\nm22aie241:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAHeCijyoW2MI+OCCv4jvwxFy9UxHjaBgRFXd1i9e3nNFraG/ALW6m2BYoTQB0A7Bi90CG7riAwmlbYU/SQBYvdYrjT4xzAx6FKgQVy5mOWfWHccUqys5sNjOJUMczkIkpJoFOF0oeYRsR12SM1GcwyfPpeHQitBCYAaptQcK8bFw3/DZLlhiB3iQXFms7JQm8tCPUAefo+QfYXOeyZtknuk9gDwRKeIQwyFUyYvw99BizBUtVbUM9wRzHBrrYCgfE8yDpFt/JUDd7eFf/A8jD0ONX0HDA0ZUS4i4gLUoA2TY+9lJ7C6IZPZHewEV7oDe5b+v4Y9+p49WeLHh2FIjakE= google-ssh {\"userName\":\"m22aie241@iitj.ac.in\",\"expireOn\":\"2025-03-02T18:53:38+0000\"}",
+          "key": "ssh-keys"
+        }
+      ]
+    },
+    "name": "instance1-m22aie241",
+    "networkInterfaces": [
+      {
+        "stackType": "IPV4_ONLY",
+        "name": "nic0",
+        "network": "projects/cloud-computing-452515/global/networks/default",
+        "accessConfigs": [
+          {
+            "name": "External NAT",
+            "type": "ONE_TO_ONE_NAT",
+            "natIP": "34.172.159.142",
+            "kind": "compute#accessConfig",
+            "networkTier": "PREMIUM"
+          }
+        ],
+        "subnetwork": "projects/cloud-computing-452515/regions/us-central1/subnetworks/default",
+        "networkIP": "10.128.0.2",
+        "fingerprint": "Xxh5UyztLUQ=",
+        "kind": "compute#networkInterface"
+      }
+    ],
+    "reservationAffinity": {
+      "consumeReservationType": "ANY_RESERVATION"
+    },
+    "resourceStatus": {
+      "scheduling": {}
+    },
+    "satisfiesPzi": true,
+    "scheduling": {
+      "onHostMaintenance": "MIGRATE",
+      "provisioningModel": "STANDARD",
+      "automaticRestart": true,
+      "preemptible": false
+    },
+    "selfLink": "projects/cloud-computing-452515/zones/us-central1-c/instances/instance1-m22aie241",
+    "serviceAccounts": [
+      {
+        "email": "510814056867-compute@developer.gserviceaccount.com",
+        "scopes": [
+          "https://www.googleapis.com/auth/devstorage.read_only",
+          "https://www.googleapis.com/auth/logging.write",
+          "https://www.googleapis.com/auth/monitoring.write",
+          "https://www.googleapis.com/auth/service.management.readonly",
+          "https://www.googleapis.com/auth/servicecontrol",
+          "https://www.googleapis.com/auth/trace.append"
+        ]
+      }
+    ],
+    "shieldedInstanceConfig": {
+      "enableSecureBoot": false,
+      "enableVtpm": true,
+      "enableIntegrityMonitoring": true
+    },
+    "shieldedInstanceIntegrityPolicy": {
+      "updateAutoLearnPolicy": true
+    },
+    "shieldedVmConfig": {
+      "enableSecureBoot": false,
+      "enableVtpm": true,
+      "enableIntegrityMonitoring": true
+    },
+    "shieldedVmIntegrityPolicy": {
+      "updateAutoLearnPolicy": true
+    },
+    "startRestricted": false,
+    "status": "RUNNING",
+    "tags": {
+      "items": [
+        "crossvm",
+        "http-server",
+        "https-server",
+        "lb-health-check"
+      ],
+      "fingerprint": "za79i9eCiZk="
+    },
+    "zone": "projects/cloud-computing-452515/zones/us-central1-c"
+  }

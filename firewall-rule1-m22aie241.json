@@ -1,0 +1,27 @@
+{
+    "allowed": [
+      {
+        "IPProtocol": "all"
+      }
+    ],
+    "creationTimestamp": "2025-03-02T10:42:49.735-08:00",
+    "description": "",
+    "direction": "INGRESS",
+    "disabled": false,
+    "enableLogging": false,
+    "id": "1760874124171352134",
+    "kind": "compute#firewall",
+    "logConfig": {
+      "enable": false
+    },
+    "name": "firewall-rule1-m22aie241",
+    "network": "projects/cloud-computing-452515/global/networks/default",
+    "priority": 1000,
+    "selfLink": "projects/cloud-computing-452515/global/firewalls/firewall-rule1-m22aie241",
+    "sourceRanges": [
+      "0.0.0.0"
+    ],
+    "targetTags": [
+      "crossvm"
+    ]
+  }
